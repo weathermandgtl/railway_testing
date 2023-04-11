@@ -1,13 +1,15 @@
 import mysql.connector
 import time
+import os
 
-# Establishing a connection to the MySQL database
+# db = mysql.connector.connect(host="localhost", user="root", password="skilover1!", database="testdatabase")
 db = mysql.connector.connect(
-  host="containers-us-west-14.railway.app",
-  user="root",
-  password="bMaIkMPFghZRelELXvD1",
-  database="railway"
-)
+    host=os.getenv('MYSQLHOST'),
+    user=os.getenv('MYSQLUSER'),
+    port=os.getenv('MYSQLPORT'),
+    password=os.getenv('MYSQLPASSWORD'),
+    database=os.getenv('MYSQLDATABASE'))
+
 
 # # Creating a cursor object
 cursor = db.cursor()
