@@ -6,7 +6,7 @@ import os
 db = mysql.connector.connect(
     host=os.getenv('MYSQLHOST'),
     user=os.getenv('MYSQLUSER'),
-    port=os.getenv('MYSQLPORT'),
+    port=7140,
     password=os.getenv('MYSQLPASSWORD'),
     database=os.getenv('MYSQLDATABASE'))
 
