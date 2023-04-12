@@ -10,6 +10,7 @@ db = mysql.connector.connect(
     password=os.getenv('MYSQLPASSWORD'),
     database=os.getenv('MYSQLDATABASE'))
 
+
 # # Creating a cursor object
 cursor = db.cursor()
 # cursor.execute("DROP TABLE Grid")
